@@ -48,7 +48,7 @@ function sssoon_enable() {
         exit();
     }
 }
-add_action('plugins_loaded', 'sssoon_enable');
+add_action('init', 'sssoon_enable');
 
 add_action('plugins_loaded', 'sssoon_send_mail');
 function sssoon_send_mail()
