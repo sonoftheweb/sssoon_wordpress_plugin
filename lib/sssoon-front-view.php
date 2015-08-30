@@ -41,6 +41,12 @@ function sssoon_front_view()
 
         echo '</style>';
         ?>
+
+        <meta property="og:url"           content="<?php echo get_bloginfo('url'); ?>" />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content="<?php echo get_bloginfo('name'); ?>" />
+        <meta property="og:description"   content="<?php echo $content['abouttext']; ?>" />
+
     </head>
     <body>
 
@@ -58,35 +64,11 @@ function sssoon_front_view()
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="images/flags/US.png"/>
-                            English(US)
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><img src="images/flags/DE.png"/> Deutsch</a></li>
-                            <li><a href="#"><img src="images/flags/GB.png"/> English(UK)</a></li>
-                            <li><a href="#"><img src="images/flags/FR.png"/> Français</a></li>
-                            <li><a href="#"><img src="images/flags/RO.png"/> Română</a></li>
-                            <li><a href="#"><img src="images/flags/IT.png"/> Italiano</a></li>
-
-                            <li class="divider"></li>
-                            <li><a href="#"><img src="images/flags/ES.png"/> Español <span class="label label-default">soon</span></a></li>
-                            <li><a href="#"><img src="images/flags/BR.png"/> Português <span class="label label-default">soon</span></a></li>
-                            <li><a href="#"><img src="images/flags/JP.png"/> 日本語 <span class="label label-default">soon</span></a></li>
-                            <li><a href="#"><img src="images/flags/TR.png"/> Türkçe <span class="label label-default">soon</span></a></li>
-
-                        </ul>
-                    </li>
-
-                </ul>
                 <?php if ($design_options['social'] == '1'): ?>
                 <ul class="nav navbar-nav navbar-right">
                     <?php if ($design_options['fb'] == '1') { ?>
                     <li>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_bloginfo('url'); ?>">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_bloginfo('url'); ?>" target="_blank">
                             <i class="fa fa-facebook-square"></i>
                             Share
                         </a>
@@ -94,7 +76,7 @@ function sssoon_front_view()
                     <?php } ?>
                     <?php if ($design_options['tw'] == '1') { ?>
                     <li>
-                        <a href="https://twitter.com/home?status=<?php echo get_bloginfo('name'); ?>%20is%20coming%20soon.%20I%20just%20checked!">
+                        <a href="https://twitter.com/home?status=<?php echo get_bloginfo('name'); ?>%20is%20coming%20soon.%20Check%20back%20later%20at%20<?php echo get_bloginfo('url'); ?>." target="_blank">
                             <i class="fa fa-twitter"></i>
                             Tweet
                         </a>
@@ -104,9 +86,9 @@ function sssoon_front_view()
                     <?php if ($design_options['email'] == '1') { ?>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown"
-                               href="mailto:replace@me.com?&subject=I just saw this online&body=Someone%20shared%20this%20link%20with%20you.%23">
+                               href="#">
                                 <i class="fa fa-envelope-o"></i>
-                                Email
+                                <?php _e('Email','sssoon'); ?>
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
