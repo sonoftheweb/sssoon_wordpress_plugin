@@ -50,9 +50,20 @@ function sssoon_enable() {
 }
 add_action('init', 'sssoon_enable');
 
+add_action('init', 'sssoon_send_mail');
+function sssoon_send_mail()
+{
+    if (isset($_POST['sssoon_email'])) {
+        $email = $_POST['sssoon_email'];
+        $message = get_bloginfo('name') . ' (' . get_bloginfo('url') . ') is coming soon. Please keep an eye on this space.';
+        $subject = get_bloginfo('name') . ' is coming soon';
+        wp_mail($email, $subject, $message);
+    }
+}
+
 add_action( 'admin_enqueue_scripts', 'wp_enqueue_color_picker' );
 function wp_enqueue_color_picker( $hook_suffix ) {
     wp_enqueue_style( 'wp-color-picker' );
     wp_enqueue_script( 'wp-color-picker');
-    wp_enqueue_script( 'wp-color-picker-script-handle', plugins_url('wp-color-picker-script.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
+    //wp_enqueue_script( 'wp-color-picker-script-handle', plugins_url('wp-color-picker-script.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
 }

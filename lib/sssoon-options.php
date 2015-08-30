@@ -406,54 +406,66 @@ function sssoon_admin_settings()
                                 </tr>
 
                                 <tr valign="top">
-                                    <th scope="row"><?php _e('Social Media', 'sssoon'); ?></th>
+                                    <th scope="row"><?php _e('Social Media Share', 'sssoon'); ?></th>
                                     <td>
-                                        <input id="sssoon_design_options[social]" name="sssoon_design_options[social]"
+                                        <input id="sssoon_design_options[social] allowsocial"
+                                               name="sssoon_design_options[social]"
                                                type="checkbox" value="1" <?php checked('1', $options['social']); ?> />
                                         <label class="description"
-                                               for="sssoon_design_options[social]"><?php _e('Include Social Media Links', 'sssoon'); ?></label>
+                                               for="sssoon_design_options[social]"><?php _e('Include Social Media Sharing', 'sssoon'); ?></label>
                                     </td>
                                 </tr>
                                 <tr valign="top">
-                                    <th scope="row"><?php _e('Facebook', 'sssoon'); ?></th>
+                                    <th scope="row"><?php _e('Facebook Share', 'sssoon'); ?></th>
                                     <td>
-                                        <input id="sssoon_design_options[fb]" class="regular-text" type="text"
-                                               name="sssoon_design_options[fb]"
-                                               value="<?php esc_attr_e($options['fb']); ?>"/>
+                                        <input id="sssoon_design_options[fb]" name="sssoon_design_options[fb]"
+                                               type="checkbox" value="1" <?php checked('1', $options['fb']); ?> />
                                     </td>
                                 </tr>
                                 <tr valign="top">
-                                    <th scope="row"><?php _e('Twitter', 'sssoon'); ?></th>
+                                    <th scope="row"><?php _e('Twitter Share', 'sssoon'); ?></th>
                                     <td>
-                                        <input id="sssoon_design_options[tw]" class="regular-text" type="text"
-                                               name="sssoon_design_options[tw]"
-                                               value="<?php esc_attr_e($options['tw']); ?>"/>
+                                        <input id="sssoon_design_options[tw]" name="sssoon_design_options[tw]"
+                                               type="checkbox" value="1" <?php checked('1', $options['tw']); ?> />
                                     </td>
                                 </tr>
                                 <tr valign="top">
-                                    <th scope="row"><?php _e('Instagram', 'sssoon'); ?></th>
+                                    <th scope="row"><?php _e('Mail Sharing', 'sssoon'); ?></th>
                                     <td>
-                                        <input id="sssoon_design_options[in]" class="regular-text" type="text"
+                                        <input id="sssoon_design_options[email]" name="sssoon_design_options[email]"
+                                               type="checkbox" value="1" <?php checked('1', $options['email']); ?> />
+                                    </td>
+                                </tr>
+                                <!--<tr valign="top">
+                                    <th scope="row"><?php /*_e('Instagram', 'sssoon'); */
+                                ?></th>
+                                    <td>
+                                        <input id="sssoon_design_options[in]" class="regular-text social-show" type="text"
                                                name="sssoon_design_options[in]"
-                                               value="<?php esc_attr_e($options['in']); ?>"/>
+                                               value="<?php /*esc_attr_e($options['in']); */
+                                ?>"/>
                                     </td>
                                 </tr>
                                 <tr valign="top">
-                                    <th scope="row"><?php _e('Linkedin', 'sssoon'); ?></th>
+                                    <th scope="row"><?php /*_e('Linkedin', 'sssoon'); */
+                                ?></th>
                                     <td>
-                                        <input id="sssoon_design_options[link]" class="regular-text" type="text"
+                                        <input id="sssoon_design_options[link]" class="regular-text social-show" type="text"
                                                name="sssoon_design_options[link]"
-                                               value="<?php esc_attr_e($options['link']); ?>"/>
+                                               value="<?php /*esc_attr_e($options['link']); */
+                                ?>"/>
                                     </td>
                                 </tr>
                                 <tr valign="top">
-                                    <th scope="row"><?php _e('Googleplus', 'sssoon'); ?></th>
+                                    <th scope="row"><?php /*_e('Googleplus', 'sssoon'); */
+                                ?></th>
                                     <td>
-                                        <input id="sssoon_design_options[gplus]" class="regular-text" type="text"
+                                        <input id="sssoon_design_options[gplus]" class="regular-text social-show" type="text"
                                                name="sssoon_design_options[gplus]"
-                                               value="<?php esc_attr_e($options['gplus']); ?>"/>
+                                               value="<?php /*esc_attr_e($options['gplus']); */
+                                ?>"/>
                                     </td>
-                                </tr>
+                                </tr>-->
 
 
                             </table>

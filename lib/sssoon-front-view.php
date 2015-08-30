@@ -25,26 +25,22 @@ function sssoon_front_view()
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
         <?php
-        $design_optios = get_option('sssoon_design_options');
+        $design_options = get_option('sssoon_design_options');
         echo '<style>';
 
 
-        if ($design_optios['bg'] == 'color'):
+        if ($design_options['bg'] == 'color'):
             echo '.main{
-                    background:' . $design_optios['customcolor'].';
+                    background:' . $design_options['customcolor'] . ';
                  }';
-        elseif($design_optios['bg'] == 'image'):
+        elseif ($design_options['bg'] == 'image'):
             echo '.main{
-                    background:url(' . $design_optios['bgimg']. ') no-repeat;
+                    background:url(' . $design_options['bgimg'] . ') no-repeat;
                   }';
         endif;
 
         echo '</style>';
-
-
         ?>
-
-
     </head>
     <body>
 
@@ -86,26 +82,46 @@ function sssoon_front_view()
                     </li>
 
                 </ul>
+                <?php if ($design_options['social'] == '1'): ?>
                 <ul class="nav navbar-nav navbar-right">
+                    <?php if ($design_options['fb'] == '1') { ?>
                     <li>
-                        <a href="#">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_bloginfo('url'); ?>">
                             <i class="fa fa-facebook-square"></i>
                             Share
                         </a>
                     </li>
+                    <?php } ?>
+                    <?php if ($design_options['tw'] == '1') { ?>
                     <li>
-                        <a href="#">
+                        <a href="https://twitter.com/home?status=<?php echo get_bloginfo('name'); ?>%20is%20coming%20soon.%20I%20just%20checked!">
                             <i class="fa fa-twitter"></i>
                             Tweet
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-envelope-o"></i>
-                            Email
-                        </a>
-                    </li>
+                    <?php } ?>
+
+                    <?php if ($design_options['email'] == '1') { ?>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown"
+                               href="mailto:replace@me.com?&subject=I just saw this online&body=Someone%20shared%20this%20link%20with%20you.%23">
+                                <i class="fa fa-envelope-o"></i>
+                                Email
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <form class="sendmailform" method="post" action="">
+                                    <input type="email" class="form-control"
+                                           placeholder="<?php _e('Send to Email', 'sssoon'); ?>" name="sssoon_email"
+                                           id="sssoon_email"/>
+                                    <input type="submit" class="btn btn-success btn-fill btn-block" value="Submit"/>
+                                </form>
+                            </ul>
+                        </li>
+                    <?php } ?>
+
                 </ul>
+                <?php endif; ?>
 
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
@@ -114,7 +130,7 @@ function sssoon_front_view()
 
         <!--    Change the image source '/images/default.jpg' with your favourite image.     -->
 
-        <?php if ($design_optios['bg'] == 'image'): ?>
+    <?php if ($design_options['bg'] == 'image'): ?>
             <div class="cover black" data-color="black"></div>
         <?php endif; ?>
 
@@ -157,7 +173,7 @@ function sssoon_front_view()
     </div>
 
     </body>
-    <script src="<?php echo plugins_url('lib/js/jquery-1.10.2.js', dirname(__FILE__)); ?>" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
     <script src="<?php echo plugins_url('lib/js/bootstrap.min.js', dirname(__FILE__)); ?>" type="text/javascript"></script>
     </html>
 <?php }
