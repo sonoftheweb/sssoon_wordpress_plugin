@@ -3,6 +3,7 @@
 add_action('admin_init', 'sssoon_general_options_init');
 add_action('admin_init', 'sssoon_content_options_init');
 add_action('admin_init', 'sssoon_design_options_init');
+add_action('admin_init', 'sssoon_mailing_options_init');
 add_action('admin_menu', 'sssoon_admin_add');
 add_action('admin_enqueue_scripts', 'sssoon_stylesheet_admin');
 
@@ -21,6 +22,12 @@ function sssoon_content_options_init()
 function sssoon_design_options_init()
 {
     register_setting('sssoon_design', 'sssoon_design_options', 'sssoon_design_options_validate');
+
+}
+
+function sssoon_mailing_options_init()
+{
+    register_setting('sssoon_mail_list', 'sssoon_mailing_options', 'sssoon_mailing_options_validate');
 
 }
 
@@ -93,6 +100,7 @@ function sssoon_admin_settings()
             <a class="nav-tab nav-tab-active" href="#general"><?php _e('General Settings', 'sssoon'); ?></a>
             <a class="nav-tab" href="#content"><?php _e('Page Content', 'sssoon'); ?></a>
             <a class="nav-tab" href="#design"><?php _e('Design Page', 'sssoon'); ?></a>
+            <a class="nav-tab" href="#maillist"><?php _e('Mail List Options', 'sssoon'); ?></a>
         </div>
 
         <div class="wpmm-wrapper">
@@ -207,7 +215,6 @@ function sssoon_admin_settings()
                         </script>
 
                     </div>
-
                     <div id="tab-content" class="hidden">
 
 
@@ -337,17 +344,7 @@ function sssoon_admin_settings()
 
 
                     </div>
-
                     <div id="tab-design" class="hidden">
-                        <h2> Design Tab </h2>
-
-
-                        <?php
-                        /**
-                         * A sample checkbox option
-                         */
-
-                        ?>
 
                         <form method="post" action="options.php">
                             <?php settings_fields('sssoon_design'); ?>
@@ -436,36 +433,72 @@ function sssoon_admin_settings()
                                                type="checkbox" value="1" <?php checked('1', $options['email']); ?> />
                                     </td>
                                 </tr>
-                                <!--<tr valign="top">
-                                    <th scope="row"><?php /*_e('Instagram', 'sssoon'); */
-                                ?></th>
+                            </table>
+
+                            <p class="submit">
+                                <input type="submit" name="sssoon_save" class="button-primary"
+                                       value="<?php _e('Save Options', 'sssoon'); ?>"/>
+                            </p>
+                        </form>
+
+
+                    </div>
+                    <div id="tab-maillist" class="hidden">
+                        <form method="post" action="options.php">
+                            <?php settings_fields('sssoon_mail_list'); ?>
+                            <?php $options = get_option('sssoon_mailing_options'); ?>
+
+                            <table class="form-table">
+                                <tr valign="top">
+                                    <th scope="row"><?php _e('Enable Mail List Form', 'sssoon'); ?></th>
                                     <td>
-                                        <input id="sssoon_design_options[in]" class="regular-text social-show" type="text"
-                                               name="sssoon_design_options[in]"
-                                               value="<?php /*esc_attr_e($options['in']); */
-                                ?>"/>
+
+                                        <legend class="screen-reader-text">
+                                            <span><?php _e('Enable Mail List Form', 'sssoon'); ?></span></legend>
+                                        <input id="sssoon_mailing_options[enable]"
+                                               name="sssoon_mailing_options[enable]"
+                                               type="checkbox" value="1" <?php checked('1', $options['enable']); ?> />
+                                        <label class="description"
+                                               for="sssoon_mailing_options[enable]"><?php _e('Check to enable the form in front-end', 'sssoon'); ?></label>
                                     </td>
                                 </tr>
+
                                 <tr valign="top">
-                                    <th scope="row"><?php /*_e('Linkedin', 'sssoon'); */
-                                ?></th>
+                                    <th scope="row"><?php _e('MailChimp API Key', 'sssoon'); ?></th>
                                     <td>
-                                        <input id="sssoon_design_options[link]" class="regular-text social-show" type="text"
-                                               name="sssoon_design_options[link]"
-                                               value="<?php /*esc_attr_e($options['link']); */
-                                ?>"/>
+
+                                        <legend class="screen-reader-text">
+                                            <span><?php _e('MailChimp API Key', 'sssoon'); ?></span></legend>
+                                        <input id="sssoon_mailing_options[mailchimp_api]"
+                                               name="sssoon_mailing_options[mailchimp_api]"
+                                               type="text" value="<?php esc_attr_e($options['mailchimp_api']); ?>" />
+                                        <label class="description"
+                                               for="sssoon_mailing_options[enable]"><?php _e('Head over to MailChimp to get the API Key', 'sssoon'); ?></label>
                                     </td>
                                 </tr>
+                        <?php if($options['mailchimp_api']!='' && isset($options['mailchimp_api'])){
+
+                            include_once("MailChimp.php");
+                            $MailChimp = new MailChimp($options['mailchimp_api']);
+                            $lists = $MailChimp->get('lists');
+                            $lists = $lists['lists'];
+                            ?>
                                 <tr valign="top">
-                                    <th scope="row"><?php /*_e('Googleplus', 'sssoon'); */
-                                ?></th>
+                                    <th scope="row"><?php _e('MailChimp List', 'sssoon'); ?></th>
                                     <td>
-                                        <input id="sssoon_design_options[gplus]" class="regular-text social-show" type="text"
-                                               name="sssoon_design_options[gplus]"
-                                               value="<?php /*esc_attr_e($options['gplus']); */
-                                ?>"/>
+
+                                        <legend class="screen-reader-text">
+                                            <span><?php _e('MailChimp List', 'sssoon'); ?></span></legend>
+                                        <select name="sssoon_mailing_options[mclist]" id="sssoon_mailing_options[mclist]">
+                                            <?php foreach($lists as $mclist){ ?>
+                                                <option value="<?php echo $mclist['id']; ?>" <?php echo ($options['mclist']==$mclist['id'] ? 'selected':''); ?>><?php echo $mclist['name']; ?></option>
+                                            <?php } ?>
+                                        </select>
+                                        <label class="description"
+                                               for="sssoon_mailing_options[mclist]"><?php _e('These are all the lists you have on MailChimp', 'sssoon'); ?></label>
                                     </td>
-                                </tr>-->
+                                </tr>
+    <?php } ?>
 
 
                             </table>
@@ -525,6 +558,10 @@ function sssoon_design_options_validate($input)
 
     //$input['sometextarea'] = wp_filter_post_kses( $input['sometextarea'] );
 
+    return $input;
+}
+
+function sssoon_mailing_options_validate($input){
     return $input;
 }
 

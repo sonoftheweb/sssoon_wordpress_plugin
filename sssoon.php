@@ -48,9 +48,9 @@ function sssoon_enable() {
         exit();
     }
 }
-add_action('init', 'sssoon_enable');
+add_action('plugins_loaded', 'sssoon_enable');
 
-add_action('init', 'sssoon_send_mail');
+add_action('plugins_loaded', 'sssoon_send_mail');
 function sssoon_send_mail()
 {
     if (isset($_POST['sssoon_email'])) {
@@ -58,6 +58,26 @@ function sssoon_send_mail()
         $message = get_bloginfo('name') . ' (' . get_bloginfo('url') . ') is coming soon. Please keep an eye on this space.';
         $subject = get_bloginfo('name') . ' is coming soon';
         wp_mail($email, $subject, $message);
+    }
+}
+
+add_action('plugins_loaded', 'mc_nl_mail');
+function mc_nl_mail()
+{
+    if (isset($_POST['nl_mail'])) {
+        $email_address = $_POST['nl_mail'];
+        include_once("lib/MailChimp.php");
+        $mc_api = get_option('sssoon_mailing_options');
+        $mc_api_key = $mc_api['mailchimp_api'];
+
+        $mc_list = $mc_api['mclist'];
+
+        $MailChimp = new MailChimp($mc_api_key);
+
+        $MailChimp->post('lists/'.$mc_list.'/members', array(
+            'email_address'     => $email_address,
+            'status'            => 'subscribed'
+        ));
     }
 }
 

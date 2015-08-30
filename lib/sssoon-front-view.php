@@ -146,16 +146,16 @@ function sssoon_front_view()
                 <h4 class="motto"><?php echo $content['abouttext']; ?></h4>
                 <div class="subscribe">
                     <h5 class="info-text">
-                        Join the waiting list for the beta. We keep you posted.
+                        <?php _e('Join the waiting list for the beta. We keep you posted.','sssoon'); ?>
                     </h5>
                     <div class="row">
                         <div class="col-md-4 col-md-offset-4 col-sm6-6 col-sm-offset-3 ">
-                            <form class="form-inline" role="form">
+                            <form class="form-inline" role="form" method="post" action="">
                                 <div class="form-group">
-                                    <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                    <input type="email" class="form-control transparent" placeholder="Your email here...">
+                                    <label class="sr-only" for="nl_mail"><?php _e('Email address','sssoon'); ?></label>
+                                    <input type="email" name="nl_mail" class="form-control transparent" placeholder="<?php _e('Your email here...','sssoon'); ?>">
                                 </div>
-                                <button type="submit" class="btn btn-danger btn-fill">Notify Me</button>
+                                <button type="submit" class="btn btn-danger btn-fill"><?php _e('Notify Me','sssoon'); ?></button>
                             </form>
 
                         </div>

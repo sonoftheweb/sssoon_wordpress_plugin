@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5631b0fe-9e4b-4a5e-994f-20fa241cb88e" name="Default" comment="More Changes&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/js/jquery-2.1.4.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/js/jquery-1.10.2.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/css/coming-sssoon.css" afterPath="$PROJECT_DIR$/lib/css/coming-sssoon.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/js/scripts-admin.js" afterPath="$PROJECT_DIR$/lib/js/scripts-admin.js" />
+    <list default="true" id="5631b0fe-9e4b-4a5e-994f-20fa241cb88e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/MailChimp.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/sssoon-front-view.php" afterPath="$PROJECT_DIR$/lib/sssoon-front-view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/sssoon-options.php" afterPath="$PROJECT_DIR$/lib/sssoon-options.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sssoon.php" afterPath="$PROJECT_DIR$/sssoon.php" />
@@ -31,34 +28,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sssoon.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sssoon.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sssoon.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.74074">
-              <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.30536914">
+              <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sssoon-front-view.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sssoon-front-view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/sssoon-front-view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3657718">
-              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.407408">
+              <caret line="155" column="69" selection-start-line="155" selection-start-column="62" selection-end-line="155" selection-end-column="69" />
               <folding>
-                <element signature="e#2795#3939#0#HTML" expanded="false" />
-                <marker date="1440927268388" expanded="true" signature="6576:6651" placeholder="..." />
-                <marker date="1440927268388" expanded="true" signature="6614:6651" placeholder="..." />
-                <marker date="1440927268388" expanded="true" signature="6799:6854" placeholder="..." />
-                <marker date="1440927268388" expanded="true" signature="6915:7807" placeholder="..." />
-                <marker date="1440927268388" expanded="true" signature="6958:7064" placeholder="..." />
-                <marker date="1440927268388" expanded="true" signature="7102:7784" placeholder="..." />
-                <marker date="1440927268388" expanded="true" signature="7192:7757" placeholder="..." />
-                <marker date="1440927268388" expanded="true" signature="7259:7725" placeholder="..." />
-                <marker date="1440927268388" expanded="true" signature="7316:7584" placeholder="..." />
-                <marker date="1440927268388" expanded="true" signature="7870:7948" placeholder="..." />
-                <marker date="1440927268388" expanded="true" signature="7906:7948" placeholder="..." />
+                <element signature="e#2799#3943#0#HTML" expanded="false" />
+                <marker date="1440956661575" expanded="true" signature="6711:6786" placeholder="..." />
+                <marker date="1440956661575" expanded="true" signature="6749:6786" placeholder="..." />
+                <marker date="1440956661575" expanded="true" signature="6934:6989" placeholder="..." />
+                <marker date="1440956661575" expanded="true" signature="7050:8070" placeholder="..." />
+                <marker date="1440956661575" expanded="true" signature="7093:7224" placeholder="..." />
+                <marker date="1440956661575" expanded="true" signature="7262:8047" placeholder="..." />
+                <marker date="1440956661575" expanded="true" signature="7352:8020" placeholder="..." />
+                <marker date="1440956661575" expanded="true" signature="7443:7988" placeholder="..." />
+                <marker date="1440956661575" expanded="true" signature="7500:7822" placeholder="..." />
+                <marker date="1440956661575" expanded="true" signature="8133:8211" placeholder="..." />
+                <marker date="1440956661575" expanded="true" signature="8169:8211" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -68,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/lib/css/coming-sssoon.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="930" column="12" selection-start-line="930" selection-start-column="12" selection-end-line="930" selection-end-column="12" />
+              <caret line="929" column="13" selection-start-line="929" selection-start-column="13" selection-end-line="929" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -77,8 +74,26 @@
       <file leaf-file-name="sssoon-options.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/sssoon-options.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.0">
-              <caret line="413" column="121" selection-start-line="413" selection-start-column="121" selection-end-line="413" selection-end-column="121" />
+            <state vertical-scroll-proportion="-17.407408">
+              <caret line="497" column="82" selection-start-line="497" selection-start-column="82" selection-end-line="497" selection-end-column="82" />
+              <folding>
+                <element signature="e#3135#8627#0#HTML" expanded="false" />
+                <element signature="e#8648#14360#0#HTML" expanded="false" />
+                <marker date="1440957038667" expanded="true" signature="24158:24251" placeholder="..." />
+                <marker date="1440957038667" expanded="true" signature="24503:24654" placeholder="..." />
+                <marker date="1440957038667" expanded="true" signature="24599:24654" placeholder="..." />
+                <marker date="1440957038667" expanded="true" signature="24876:24970" placeholder="..." />
+                <marker date="1440957038667" expanded="true" signature="24927:24951" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MailChimp.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/MailChimp.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -88,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/lib/js/scripts-admin.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
+              <caret line="78" column="52" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -109,10 +124,11 @@
       <list>
         <option value="$PROJECT_DIR$/lib/js/jquery-1.10.2.js" />
         <option value="$PROJECT_DIR$/lib/js/scripts-admin.js" />
-        <option value="$PROJECT_DIR$/lib/sssoon-options.php" />
         <option value="$PROJECT_DIR$/lib/css/coming-sssoon.css" />
-        <option value="$PROJECT_DIR$/sssoon.php" />
+        <option value="$PROJECT_DIR$/lib/MailChimp.php" />
         <option value="$PROJECT_DIR$/lib/sssoon-front-view.php" />
+        <option value="$PROJECT_DIR$/lib/sssoon-options.php" />
+        <option value="$PROJECT_DIR$/sssoon.php" />
       </list>
     </option>
   </component>
@@ -188,42 +204,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sssoon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sssoon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sssoon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sssoon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -276,7 +256,13 @@
       <option name="project" value="LOCAL" />
       <updated>1440785433164</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Social share added. Also added mail form for sharing via mail.">
+      <created>1440927582746</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1440927582746</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -295,7 +281,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22280967" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12084592" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -317,10 +303,11 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="More Changes&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="More Changes&#10;" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Social share added. Also added mail form for sharing via mail." />
+    <option name="LAST_COMMIT_MESSAGE" value="Social share added. Also added mail form for sharing via mail." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -348,15 +335,15 @@
     <entry file="file://$PROJECT_DIR$/lib/js/scripts-admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
+          <caret line="78" column="52" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sssoon.php">
+    <entry file="file://$PROJECT_DIR$/lib/MailChimp.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.74074">
-          <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -364,37 +351,53 @@
     <entry file="file://$PROJECT_DIR$/lib/css/coming-sssoon.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="930" column="12" selection-start-line="930" selection-start-column="12" selection-end-line="930" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/sssoon-options.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.0">
-          <caret line="413" column="121" selection-start-line="413" selection-start-column="121" selection-end-line="413" selection-end-column="121" />
+          <caret line="929" column="13" selection-start-line="929" selection-start-column="13" selection-end-line="929" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/sssoon-front-view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3657718">
-          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+        <state vertical-scroll-proportion="-11.407408">
+          <caret line="155" column="69" selection-start-line="155" selection-start-column="62" selection-end-line="155" selection-end-column="69" />
           <folding>
-            <element signature="e#2795#3939#0#HTML" expanded="false" />
-            <marker date="1440927268388" expanded="true" signature="6576:6651" placeholder="..." />
-            <marker date="1440927268388" expanded="true" signature="6614:6651" placeholder="..." />
-            <marker date="1440927268388" expanded="true" signature="6799:6854" placeholder="..." />
-            <marker date="1440927268388" expanded="true" signature="6915:7807" placeholder="..." />
-            <marker date="1440927268388" expanded="true" signature="6958:7064" placeholder="..." />
-            <marker date="1440927268388" expanded="true" signature="7102:7784" placeholder="..." />
-            <marker date="1440927268388" expanded="true" signature="7192:7757" placeholder="..." />
-            <marker date="1440927268388" expanded="true" signature="7259:7725" placeholder="..." />
-            <marker date="1440927268388" expanded="true" signature="7316:7584" placeholder="..." />
-            <marker date="1440927268388" expanded="true" signature="7870:7948" placeholder="..." />
-            <marker date="1440927268388" expanded="true" signature="7906:7948" placeholder="..." />
+            <element signature="e#2799#3943#0#HTML" expanded="false" />
+            <marker date="1440956661575" expanded="true" signature="6711:6786" placeholder="..." />
+            <marker date="1440956661575" expanded="true" signature="6749:6786" placeholder="..." />
+            <marker date="1440956661575" expanded="true" signature="6934:6989" placeholder="..." />
+            <marker date="1440956661575" expanded="true" signature="7050:8070" placeholder="..." />
+            <marker date="1440956661575" expanded="true" signature="7093:7224" placeholder="..." />
+            <marker date="1440956661575" expanded="true" signature="7262:8047" placeholder="..." />
+            <marker date="1440956661575" expanded="true" signature="7352:8020" placeholder="..." />
+            <marker date="1440956661575" expanded="true" signature="7443:7988" placeholder="..." />
+            <marker date="1440956661575" expanded="true" signature="7500:7822" placeholder="..." />
+            <marker date="1440956661575" expanded="true" signature="8133:8211" placeholder="..." />
+            <marker date="1440956661575" expanded="true" signature="8169:8211" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/sssoon-options.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.407408">
+          <caret line="497" column="82" selection-start-line="497" selection-start-column="82" selection-end-line="497" selection-end-column="82" />
+          <folding>
+            <element signature="e#3135#8627#0#HTML" expanded="false" />
+            <element signature="e#8648#14360#0#HTML" expanded="false" />
+            <marker date="1440957038667" expanded="true" signature="24158:24251" placeholder="..." />
+            <marker date="1440957038667" expanded="true" signature="24503:24654" placeholder="..." />
+            <marker date="1440957038667" expanded="true" signature="24599:24654" placeholder="..." />
+            <marker date="1440957038667" expanded="true" signature="24876:24970" placeholder="..." />
+            <marker date="1440957038667" expanded="true" signature="24927:24951" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sssoon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30536914">
+          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
