@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5631b0fe-9e4b-4a5e-994f-20fa241cb88e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/MailChimp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/sssoon-front-view.php" afterPath="$PROJECT_DIR$/lib/sssoon-front-view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/sssoon-options.php" afterPath="$PROJECT_DIR$/lib/sssoon-options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sssoon.php" afterPath="$PROJECT_DIR$/sssoon.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sssoon.iws" />
@@ -262,7 +258,13 @@
       <option name="project" value="LOCAL" />
       <updated>1440927582746</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Social share added. Also added mail form for sharing via mail.">
+      <created>1440957363497</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1440957363497</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
